@@ -55,17 +55,58 @@ Welcome to the Music Album API! This RESTful API allows you to manage music albu
    npm start
    ```
 
-## Usage
 
-1. Open Thunder Client or any other HTTP client of your choice.
+## Routes
 
-2. Send GET requests to the following URLs:
+### Albums
 
-   - [http://localhost:3000/en](http://localhost:3000/en) (English)
-   - [http://localhost:3000/es](http://localhost:3000/es) (Spanish)
-   - [http://localhost:3000/fr](http://localhost:3000/fr) (French)
+Base URL: `http://localhost:3000/api/albums`
 
-3. Verify that you receive language-specific messages in the responses.
+- `GET /`: Retrieve all albums.
+- `POST /`: Create a new album.
+- `GET /:id`: Retrieve a specific album by ID.
+- `PATCH /:id`: Update a specific album by ID.
+- `DELETE /:id`: Delete a specific album by ID.
+
+### Artists
+
+Base URL: `http://localhost:3000/api/artists`
+
+- `GET /`: Retrieve all artists.
+- `POST /`: Create a new artist.
+- `GET /:id`: Retrieve a specific artist by ID.
+- `PATCH /:id`: Update a specific artist by ID.
+- `DELETE /:id`: Delete a specific artist by ID.
+
+### Songs
+
+Base URL: `http://localhost:3000/api/songs`
+
+- `GET /`: Retrieve all songs.
+- `POST /`: Create a new song.
+- `GET /:id`: Retrieve a specific song by ID.
+- `PATCH /:id`: Update a specific song by ID.
+- `DELETE /:id`: Delete a specific song by ID.
+
+## Testing
+
+To test the CRUD operations for each route, you can use tools like Postman, curl, or make HTTP requests from your frontend or backend code. Here's how you can test each route:
+
+1. **GET /api/albums**: Retrieve all albums.
+   - Send a GET request to `http://localhost:3000/api/albums`.
+
+2. **POST /api/albums**: Create a new album.
+   - Send a POST request to `http://localhost:3000/api/albums` with the new album data in the request body.
+
+3. **GET /api/albums/:id**: Retrieve a specific album by ID.
+   - Replace `:id` with the ID of the album you want to retrieve.
+   - Send a GET request to `http://localhost:3000/api/albums/:id`.
+
+4. **PATCH /api/albums/:id**: Update a specific album by ID.
+   - Replace `:id` with the ID of the album you want to update.
+   - Send a PATCH request to `http://localhost:3000/api/albums/:id` with the updated album data in the request body.
+
+5. **DELETE /api/albums/:id**: Delete a s
 
 ## License
 
